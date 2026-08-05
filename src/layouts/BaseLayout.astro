@@ -1,0 +1,148 @@
+---
+import "../styles/global.css";
+const { title = "BEYOND Construction Engineering" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial,Helvetica,sans-serif;
+            background:#ffffff;
+            color:#222;
+        }
+
+        a{
+            text-decoration:none;
+            color:inherit;
+        }
+
+        .container{
+            width:1200px;
+            margin:auto;
+        }
+
+        nav{
+
+            height:80px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+
+            font-size:28px;
+            font-weight:bold;
+            color:#003366;
+
+        }
+
+        .menu{
+
+            display:flex;
+            gap:40px;
+
+        }
+
+        .hero{
+
+            height:600px;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            background:linear-gradient(135deg,#003366,#0059b3);
+
+            color:white;
+
+            text-align:center;
+
+        }
+
+        h1{
+
+            font-size:64px;
+
+        }
+
+        p{
+
+            margin-top:20px;
+
+            font-size:22px;
+
+        }
+
+        .btn{
+
+            display:inline-block;
+
+            margin-top:40px;
+
+            background:#f7b500;
+
+            color:#000;
+
+            padding:16px 36px;
+
+            border-radius:8px;
+
+            font-weight:bold;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+
+BEYOND CEC
+
+</div>
+
+<div class="menu">
+
+<a href="/">Home</a>
+
+<a href="/about">About</a>
+
+<a href="/services">Services</a>
+
+<a href="/projects">Projects</a>
+
+<a href="/contact">Contact</a>
+
+</div>
+
+</nav>
+
+</div>
+
+<slot />
+
+</body>
+
+</html>
