@@ -1,217 +1,353 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ConstructionScan from "../components/ConstructionScan.astro";
 ---
 
-<BaseLayout title="BEYOND CONSTRUCTION | International Construction Engineering">
 
-<section class="min-h-screen bg-slate-950 text-white">
-
-  <!-- Hero Section -->
-  <div class="min-h-screen flex items-center justify-center px-8">
-
-    <div class="text-center max-w-5xl">
-
-      <h1 class="text-6xl md:text-7xl font-bold text-blue-400">
-        BEYOND CONSTRUCTION
-      </h1>
+<BaseLayout>
 
 
-      <p class="mt-8 text-2xl text-gray-300">
-        Building Beyond Boundaries
-      </p>
+<!-- ================= HERO ================= -->
 
 
-      <p class="mt-4 text-lg text-gray-400">
-        International Construction Engineering Solutions
-      </p>
+<section class="relative min-h-screen overflow-hidden bg-[#020617] text-white">
 
 
-      <a
-        href="/projects"
-        class="inline-block mt-10 bg-yellow-400 text-black font-bold px-10 py-4 rounded-lg hover:bg-yellow-300 transition"
-      >
-        View Projects
-      </a>
+  <!-- HERO BACKGROUND IMAGE -->
 
-    </div>
+  <div class="absolute inset-0 z-0">
+
+
+    <img
+      src="/construction-bg.jpg"
+      alt="BEYOND Construction"
+      class="h-full w-full object-cover scale-105"
+    />
+
+
+  </div>
+
+
+
+  <!-- DARK OVERLAY -->
+
+
+<!-- DARK OVERLAY -->
+
+<div class="absolute inset-0 z-0 
+bg-gradient-to-b
+from-blue-950/40
+via-[#020617]/50
+to-[#020617]/90">
+</div>
+
+
+
+
+  <!-- V3 BUILDING SCAN -->
+
+
+  <div class="absolute inset-0 z-[1]">
+
+    <ConstructionScan />
 
   </div>
 
 
 
 
-  <!-- About Section -->
-  <section class="py-20 bg-slate-900">
 
-    <div class="max-w-6xl mx-auto px-8 text-center">
+  <!-- HERO CONTENT -->
 
 
-      <h2 class="text-4xl font-bold text-blue-400">
-        Engineering Excellence Across Southeast Asia
-      </h2>
+  <div class="relative z-10 flex min-h-screen items-center">
 
 
-      <p class="mt-8 text-xl text-gray-300 leading-relaxed">
+    <div class="mx-auto w-full max-w-7xl px-8">
 
-        BEYOND Construction Engineering Co., Ltd.
-        provides professional construction,
-        installation and engineering solutions
-        for commercial and industrial projects.
+
+
+      <p class="mb-5 text-sm tracking-[0.5em] text-blue-300">
+
+        INTERNATIONAL ENGINEERING GROUP
 
       </p>
 
 
-    </div>
-
-  </section>
 
 
 
+      <h1 class="max-w-4xl text-6xl font-bold leading-tight md:text-7xl">
 
 
-  <!-- Services Section -->
-  <section class="py-20 bg-slate-950">
+        Building Beyond
 
-    <div class="max-w-7xl mx-auto px-8">
+        <br />
+
+        Boundaries
 
 
-      <h2 class="text-4xl font-bold text-center text-blue-400">
-        Our Services
+      </h1>
+
+
+
+
+
+      <h2 class="mt-8 text-3xl text-slate-300">
+
+        Engineering The Future
+
       </h2>
 
 
-      <div class="grid md:grid-cols-4 gap-8 mt-12">
-
-
-        <div class="bg-slate-900 p-8 rounded-xl">
-          <h3 class="text-xl font-bold text-yellow-400">
-            Construction
-          </h3>
-          <p class="mt-4 text-gray-300">
-            Professional construction engineering and project execution.
-          </p>
-        </div>
 
 
 
-        <div class="bg-slate-900 p-8 rounded-xl">
-          <h3 class="text-xl font-bold text-yellow-400">
-            Installation
-          </h3>
-          <p class="mt-4 text-gray-300">
-            Building systems installation and technical solutions.
-          </p>
-        </div>
+      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-slate-300">
+
+
+        Delivering integrated construction,
+        engineering and infrastructure solutions
+        across Southeast Asia.
+
+
+      </p>
 
 
 
-        <div class="bg-slate-900 p-8 rounded-xl">
-          <h3 class="text-xl font-bold text-yellow-400">
-            Exterior Lighting
-          </h3>
-          <p class="mt-4 text-gray-300">
-            Architectural lighting design and LED engineering.
-          </p>
-        </div>
+
+
+      <div class="mt-12 flex gap-5">
 
 
 
-        <div class="bg-slate-900 p-8 rounded-xl">
-          <h3 class="text-xl font-bold text-yellow-400">
-            Industrial Engineering
-          </h3>
-          <p class="mt-4 text-gray-300">
-            Equipment installation and industrial solutions.
-          </p>
-        </div>
+        <a
+        href="/projects"
+        class="
+        rounded-md
+        bg-yellow-500
+        px-9
+        py-4
+        font-semibold
+        text-black
+        transition
+        hover:bg-yellow-400">
+
+
+        View Projects
+
+
+        </a>
+
+
+
+
+
+
+        <a
+        href="/contact"
+        class="
+        rounded-md
+        border
+        border-white/40
+        px-9
+        py-4
+        transition
+        hover:bg-white
+        hover:text-black">
+
+
+        Get In Touch
+
+
+        </a>
+
+
 
 
       </div>
 
-    </div>
 
-  </section>
-
-
-
-
-
-
-  <!-- Projects Section -->
-  <section class="py-20 bg-slate-900">
-
-    <div class="max-w-6xl mx-auto px-8 text-center">
-
-
-      <h2 class="text-4xl font-bold text-blue-400">
-        Featured Project
-      </h2>
-
-
-      <h3 class="mt-10 text-3xl font-bold">
-        Unitel Headquarters Building
-      </h3>
-
-
-      <p class="mt-4 text-xl text-gray-300">
-        Vientiane, Laos
-      </p>
-
-
-      <p class="mt-6 text-gray-400">
-        Exterior Lighting Engineering Project
-        including LED lighting systems,
-        installation and intelligent control solutions.
-      </p>
-
-
-      <a
-        href="/projects"
-        class="inline-block mt-8 border border-yellow-400 text-yellow-400 px-8 py-3 rounded-lg hover:bg-yellow-400 hover:text-black transition"
-      >
-        Explore Projects
-      </a>
 
 
     </div>
 
-  </section>
+
+
+  </div>
 
 
 
 
 
-
-  <!-- Contact Section -->
-  <section class="py-20 bg-slate-950">
-
-    <div class="max-w-5xl mx-auto px-8 text-center">
+  <!-- SCROLL -->
 
 
-      <h2 class="text-4xl font-bold text-blue-400">
-        Let's Build Beyond Boundaries
-      </h2>
+  <div class="absolute bottom-10 left-1/2 z-10 -translate-x-1/2">
 
 
-      <p class="mt-6 text-gray-300 text-xl">
-        Partner with BEYOND Construction Engineering
-      </p>
+    <span class="text-xs tracking-[0.6em] text-slate-400">
+
+      SCROLL
+
+    </span>
 
 
-      <a
-        href="/contact"
-        class="inline-block mt-8 bg-yellow-400 text-black font-bold px-10 py-4 rounded-lg"
-      >
-        Contact Us
-      </a>
+  </div>
 
 
-    </div>
-
-  </section>
 
 
 </section>
+
+
+
+
+
+
+
+<!-- ================= ABOUT BEYOND ================= -->
+
+
+
+<section class="bg-white py-24">
+
+
+<div class="mx-auto max-w-7xl px-8">
+
+
+
+  <p class="text-sm tracking-[0.4em] text-blue-700">
+
+    ABOUT BEYOND
+
+  </p>
+
+
+
+
+
+  <h2 class="mt-5 text-5xl font-bold text-slate-900">
+
+
+    Building Beyond Boundaries
+
+
+  </h2>
+
+
+
+
+
+  <p class="mt-8 max-w-3xl text-lg leading-relaxed text-slate-600">
+
+
+    BEYOND CONSTRUCTION ENGINEERING CO., LTD
+    is an international construction engineering company
+    providing integrated solutions in construction,
+    engineering and infrastructure development.
+
+
+
+  </p>
+
+
+
+
+
+
+
+  <div class="mt-16 grid gap-8 md:grid-cols-3">
+
+
+
+
+
+
+    <div class="rounded-xl bg-slate-50 p-10 shadow">
+
+
+      <h3 class="text-5xl font-bold text-blue-900">
+
+        10+
+
+      </h3>
+
+
+      <p class="mt-3 text-slate-600">
+
+        Years Experience
+
+      </p>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="rounded-xl bg-slate-50 p-10 shadow">
+
+
+      <h3 class="text-5xl font-bold text-blue-900">
+
+        20+
+
+      </h3>
+
+
+      <p class="mt-3 text-slate-600">
+
+        Engineering Projects
+
+      </p>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="rounded-xl bg-slate-50 p-10 shadow">
+
+
+      <h3 class="text-5xl font-bold text-blue-900">
+
+        3+
+
+      </h3>
+
+
+      <p class="mt-3 text-slate-600">
+
+        Countries Connected
+
+      </p>
+
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+</div>
+
+
+</section>
+
+
 
 
 </BaseLayout>
