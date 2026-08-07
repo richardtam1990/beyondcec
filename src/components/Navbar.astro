@@ -14,7 +14,8 @@ border-white/10
 bg-[#061426]/70
 backdrop-blur-xl
 text-white
-">
+"
+>
 
 
 <div
@@ -26,7 +27,8 @@ items-center
 justify-between
 px-6
 py-4
-">
+"
+>
 
 
 <!-- LOGO -->
@@ -34,7 +36,6 @@ py-4
 <a href="/">
 <Logo />
 </a>
-
 
 
 
@@ -52,27 +53,27 @@ tracking-widest
 >
 
 
-<a href="/" class="hover:text-[#d4af37]">
+<a href="/" class="hover:text-[#d4af37] transition">
 HOME
 </a>
 
 
-<a href="/about" class="hover:text-[#d4af37]">
+<a href="/about" class="hover:text-[#d4af37] transition">
 ABOUT
 </a>
 
 
-<a href="/services" class="hover:text-[#d4af37]">
+<a href="/services" class="hover:text-[#d4af37] transition">
 SERVICES
 </a>
 
 
-<a href="/projects" class="hover:text-[#d4af37]">
+<a href="/projects" class="hover:text-[#d4af37] transition">
 PROJECTS
 </a>
 
 
-<a href="/contact" class="hover:text-[#d4af37]">
+<a href="/contact" class="hover:text-[#d4af37] transition">
 CONTACT
 </a>
 
@@ -85,17 +86,15 @@ CONTACT
 
 <!-- MOBILE BUTTON -->
 
-
 <button
+id="menu-btn"
 class="
 md:hidden
 text-3xl
 text-blue-200
 "
 >
-
 ☰
-
 </button>
 
 
@@ -103,4 +102,124 @@ text-blue-200
 </div>
 
 
+
+
+
+<!-- MOBILE MENU -->
+
+<div
+id="mobile-menu"
+class="
+hidden
+md:hidden
+border-t
+border-white/10
+bg-[#061426]
+"
+>
+
+
+<a
+href="/"
+class="
+block
+px-6
+py-4
+text-sm
+tracking-widest
+text-gray-300
+hover:text-[#d4af37]
+"
+>
+HOME
+</a>
+
+
+<a
+href="/about"
+class="
+block
+px-6
+py-4
+text-sm
+tracking-widest
+text-gray-300
+hover:text-[#d4af37]
+"
+>
+ABOUT
+</a>
+
+
+<a
+href="/services"
+class="
+block
+px-6
+py-4
+text-sm
+tracking-widest
+text-gray-300
+hover:text-[#d4af37]
+"
+>
+SERVICES
+</a>
+
+
+<a
+href="/projects"
+class="
+block
+px-6
+py-4
+text-sm
+tracking-widest
+text-gray-300
+hover:text-[#d4af37]
+"
+>
+PROJECTS
+</a>
+
+
+<a
+href="/contact"
+class="
+block
+px-6
+py-4
+text-sm
+tracking-widest
+text-gray-300
+hover:text-[#d4af37]
+"
+>
+CONTACT
+</a>
+
+
+</div>
+
+
 </nav>
+
+
+
+
+
+<script>
+
+const btn = document.getElementById("menu-btn");
+
+const menu = document.getElementById("mobile-menu");
+
+
+btn?.addEventListener("click", () => {
+
+menu?.classList.toggle("hidden");
+
+});
+
+
+</script>
