@@ -3,26 +3,31 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
+
 const {
-  title = "BEYOND Construction Engineering"
+  title = "BEYOND Construction Engineering",
+  description = "BEYOND Construction Engineering Co., Ltd. Professional construction engineering, MEP installation and architectural lighting solutions in Laos and ASEAN."
 } = Astro.props;
+
 ---
 
 
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
 
 
 <head>
 
+
 <meta charset="UTF-8" />
 
 
-<meta 
-name="viewport" 
-content="width=device-width, initial-scale=1.0"
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1"
 />
+
 
 
 <title>
@@ -31,31 +36,46 @@ content="width=device-width, initial-scale=1.0"
 
 
 
+<!-- FAVICON -->
+
+<link
+rel="icon"
+type="image/png"
+href="/favicon.png"
+/>
+
+
+
+<!-- SEO DESCRIPTION -->
+
 <meta
 name="description"
-content="BEYOND CONSTRUCTION ENGINEERING CO., LTD. Professional construction engineering, MEP installation and architectural lighting solutions in Laos and ASEAN."
+content={description}
 />
 
 
 
 <meta
 name="keywords"
-content="construction engineering, Laos construction, MEP installation, facade lighting, ASEAN engineering"
+content="
+construction engineering,
+Laos construction,
+MEP installation,
+architectural lighting,
+facade lighting,
+ASEAN engineering
+"
 />
 
 
+
+<!-- MOBILE THEME -->
 
 <meta
-name="author"
-content="BEYOND CONSTRUCTION ENGINEERING CO., LTD"
+name="theme-color"
+content="#020617"
 />
 
-
-
-<link
-rel="icon"
-href="/favicon.svg"
-/>
 
 
 </head>
@@ -63,12 +83,15 @@ href="/favicon.svg"
 
 
 
+
 <body
 class="
-bg-[#061426]
+overflow-x-hidden
+bg-[#020617]
 text-white
-antialiased
-">
+"
+>
+
 
 
 <Navbar />
