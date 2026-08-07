@@ -1,6 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ConstructionScan from "../components/ConstructionScan.astro";
+import AboutBeyond from "../components/AboutBeyond.astro";
+import ServicesSection from "../components/ServicesSection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import WhyChooseBeyond from "../components/WhyChooseBeyond.astro";
+import PartnersSection from "../components/PartnersSection.astro";
+import ContactCTA from "../components/ContactCTA.astro";
 ---
 
 
@@ -10,207 +16,317 @@ import ConstructionScan from "../components/ConstructionScan.astro";
 <!-- ================= HERO ================= -->
 
 
-<section class="relative min-h-screen overflow-hidden bg-[#020617] text-white">
+<section
+class="
+relative
+min-h-screen
+overflow-hidden
+bg-[#061426]
+"
+>
 
 
-  <!-- HERO BACKGROUND IMAGE -->
+<!-- REAL BUILDING BACKGROUND -->
 
-  <div class="absolute inset-0 z-0">
-
-
-    <img
-      src="/construction-bg.jpg"
-      alt="BEYOND Construction"
-      class="h-full w-full object-cover scale-105"
-    />
-
-
-  </div>
-
-
-
-  <!-- DARK OVERLAY -->
+<div
+class="
+absolute
+inset-0
+z-0
+bg-[url('/images/construction-bg.jpg')]
+bg-cover
+bg-center
+scale-105
+"
+>
+</div>
 
 
-<!-- DARK OVERLAY -->
 
-<div class="absolute inset-0 z-0 
-bg-gradient-to-b
-from-blue-950/40
-via-[#020617]/50
-to-[#020617]/90">
+<!-- DARK BLUE OVERLAY -->
+
+<div
+class="
+absolute
+inset-0
+bg-gradient-to-r
+from-[#020617]
+via-[#061426]/90
+to-[#061426]/60
+">
+</div>
+
+
+
+<!-- BOTTOM FADE -->
+
+<div
+class="
+absolute
+inset-0
+bg-gradient-to-t
+from-[#061426]
+via-transparent
+to-transparent
+">
 </div>
 
 
 
 
-  <!-- V3 BUILDING SCAN -->
+<!-- BIM SCAN -->
 
+<div
+class="
+absolute
+inset-0
+z-10
+"
+>
 
-  <div class="absolute inset-0 z-[1]">
+<ConstructionScan />
 
-    <ConstructionScan />
+</div>
 
-  </div>
 
 
+<!-- BLUE GLASS EFFECT -->
 
+<div
+class="
+absolute
+inset-0
+z-15
+bg-blue-500/5
+backdrop-blur-[1px]
+"
+>
+</div>
 
 
-  <!-- HERO CONTENT -->
 
 
-  <div class="relative z-10 flex min-h-screen items-center">
+<!-- HERO CONTENT -->
 
 
-    <div class="mx-auto w-full max-w-7xl px-8">
+<div
+class="
+relative
+z-20
+mx-auto
+flex
+min-h-screen
+max-w-7xl
+items-center
+px-6
+md:px-8
+">
 
 
+<div
+class="
+max-w-4xl
+">
 
-      <p class="mb-5 text-sm tracking-[0.5em] text-blue-300">
 
-        INTERNATIONAL ENGINEERING GROUP
+<p
+class="
+mb-6
+text-sm
+tracking-[0.6em]
+text-blue-300
+">
 
-      </p>
+BEYOND CONSTRUCTION ENGINEERING
 
+</p>
 
 
 
+<h1
+class="
+text-5xl
+font-bold
+leading-tight
+sm:text-6xl
+md:text-8xl
+"
+>
 
-      <h1 class="max-w-4xl text-6xl font-bold leading-tight md:text-7xl">
 
+BUILDING
 
-        Building Beyond
 
-        <br />
+<br />
 
-        Boundaries
 
+<span
+class="
+bg-gradient-to-r
+from-white
+via-[#d4af37]
+to-white
+bg-clip-text
+text-transparent
+">
 
-      </h1>
+BEYOND
 
+</span>
 
 
+<br />
 
 
-      <h2 class="mt-8 text-3xl text-slate-300">
+BOUNDARIES
 
-        Engineering The Future
 
-      </h2>
+</h1>
 
 
 
+<p
+class="
+mt-8
+max-w-xl
+text-lg
+leading-relaxed
+text-gray-300
+"
+>
 
+International Construction Engineering.
 
-      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-slate-300">
+<br />
 
+Building infrastructure,
+creating landmarks,
+and connecting the future.
 
-        Delivering integrated construction,
-        engineering and infrastructure solutions
-        across Southeast Asia.
+</p>
 
 
-      </p>
 
+<div
+class="
+mt-12
+flex
+flex-col
+gap-4
+sm:flex-row
+sm:gap-6
+">
 
 
+<a
+href="/projects"
+class="
+group
+relative
+overflow-hidden
+rounded-md
+bg-[#d4af37]
+px-10
+py-5
+font-semibold
+text-black
+"
+>
 
+<span
+class="
+relative
+z-10
+">
 
-      <div class="mt-12 flex gap-5">
+VIEW PROJECTS
 
+</span>
 
 
-        <a
-        href="/projects"
-        class="
-        rounded-md
-        bg-yellow-500
-        px-9
-        py-4
-        font-semibold
-        text-black
-        transition
-        hover:bg-yellow-400">
+</a>
 
 
-        View Projects
 
+<a
+href="/contact"
+class="
+rounded
+border
+border-white/30
+px-8
+py-4
+hover:bg-white/10
+">
 
-        </a>
+Contact Us
 
+</a>
 
 
 
+</div>
 
 
-        <a
-        href="/contact"
-        class="
-        rounded-md
-        border
-        border-white/40
-        px-9
-        py-4
-        transition
-        hover:bg-white
-        hover:text-black">
 
+</div>
 
-        Get In Touch
 
+</div>
 
-        </a>
 
 
 
+<!-- SCROLL -->
 
-      </div>
 
+<div
+class="
+absolute
+bottom-10
+left-1/2
+z-20
+-translate-x-1/2
+text-xs
+tracking-[0.5em]
+text-blue-300
+">
 
+SCROLL
 
-
-    </div>
-
-
-
-  </div>
-
-
-
-
-
-  <!-- SCROLL -->
-
-
-  <div class="absolute bottom-10 left-1/2 z-10 -translate-x-1/2">
-
-
-    <span class="text-xs tracking-[0.6em] text-slate-400">
-
-      SCROLL
-
-    </span>
-
-
-  </div>
-
+</div>
 
 
 
 </section>
 
 
+<AboutBeyond />
 
+<ServicesSection />
 
+<ProjectsSection />
 
+<WhyChooseBeyond />
+
+<PartnersSection />
+
+<ContactCTA />
 
 
 <!-- ================= ABOUT BEYOND ================= -->
 
 
 
-<section class="bg-white py-24">
+<section
+class="
+relative
+overflow-hidden
+bg-[#061426]
+py-20
+md:py-28
+text-white
+">
 
 
 <div class="mx-auto max-w-7xl px-8">
