@@ -7,6 +7,15 @@ import ProjectsSection from "../components/ProjectsSection.astro";
 import WhyChooseBeyond from "../components/WhyChooseBeyond.astro";
 import PartnersSection from "../components/PartnersSection.astro";
 import ContactCTA from "../components/ContactCTA.astro";
+
+import { getEntry } from "astro:content";
+
+const homepage = await getEntry("homepage", "index");
+
+const data = homepage?.data;
+
+console.log("HOMEPAGE:", homepage);
+console.log("DATA:", data);
 ---
 
 
@@ -84,7 +93,7 @@ z-10
 "
 >
 
-<ConstructionScan />
+<ConstructionScan data={data} />
 
 </div>
 
@@ -299,7 +308,7 @@ SCROLL
 </section>
 
 
-<AboutBeyond />
+<AboutBeyond data={data} />
 
 <ServicesSection />
 

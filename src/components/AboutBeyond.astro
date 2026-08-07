@@ -1,3 +1,7 @@
+---
+const { data } = Astro.props;
+---
+
 <section
 class="
 relative
@@ -76,7 +80,7 @@ tracking-[0.5em]
 text-blue-300
 ">
 
-ABOUT BEYOND
+{data.about_title}
 
 </p>
 
@@ -92,18 +96,15 @@ md:text-6xl
 "
 >
 
-Engineering
+{data.about_heading_top}
 
 <br/>
 
-
 <span class="text-[#d4af37]">
-Beyond
+{data.about_heading_highlight}
 </span>
 
-
-Expectations
-
+{data.about_heading_bottom}
 
 </h2>
 
