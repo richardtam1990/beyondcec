@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: 你的GitHub用户名/你的仓库名
+  branch: main
+
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+
+collections:
+
+  - name: "pages"
+    label: "Pages"
+    files:
+
+      - label: "Homepage"
+        name: "homepage"
+        file: "src/content/homepage.md"
+
+        fields:
+
+          - label: "Hero Title"
+            name: "hero_title"
+            widget: "string"
+
+
+          - label: "Hero Description"
+            name: "hero_description"
+            widget: "text"
+
+
+          - label: "About Title"
+            name: "about_title"
+            widget: "string"
+
+
+          - label: "About Description"
+            name: "about_description"
+            widget: "text"
