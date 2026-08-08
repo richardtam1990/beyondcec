@@ -7,178 +7,218 @@ const projects = await getCollection("projects");
 
 <BaseLayout title="Projects | BEYOND CONSTRUCTION">
 
-  <div class="text-center mb-16">
+  <main class="min-h-screen py-24 px-6">
 
-    <h1 class="text-5xl font-bold text-blue-400">
-      Our Projects
-    </h1>
+    <!-- Header -->
+    <div class="max-w-7xl mx-auto text-center mb-16">
 
-    <p class="mt-6 text-xl text-gray-300">
-      Delivering Professional Engineering Solutions Across Southeast Asia
-    </p>
+      <p class="text-sm tracking-[0.35em] uppercase text-yellow-400">
+        BEYOND CONSTRUCTION
+      </p>
 
-  </div>
+      <h1 class="mt-4 text-5xl md:text-6xl font-bold text-blue-400">
+        Our Projects
+      </h1>
+
+      <p class="mt-6 text-lg md:text-xl text-gray-300">
+        Delivering Professional Engineering Solutions Across Southeast Asia
+      </p>
+
+    </div>
 
 
-  <!-- Projects Grid -->
+    <!-- Projects Grid -->
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-10">
 
-  <div class="grid md:grid-cols-2 gap-10">
+      {
+        projects.map((project, index) => {
 
-    {
-      projects.map((project, index) => (
+          const image =
+            project.data.images?.[0] ?? "";
 
-        <div
-          class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 hover:border-yellow-400 transition"
-        >
+          return (
 
-          <!-- Project Image -->
+            <a
+              href={`/projects/${project.id}/`}
+              class="group block"
+            >
 
-          <div class="h-64 bg-slate-800 overflow-hidden">
+              <article
+                class="h-full bg-slate-900 rounded-2xl overflow-hidden
+                       border border-slate-800
+                       hover:border-yellow-400
+                       transition-all duration-500
+                       hover:-translate-y-1
+                       hover:shadow-2xl hover:shadow-blue-950/40"
+              >
 
-            {
-              project.data.image ? (
+                <!-- Project Image -->
+                <div class="relative h-64 md:h-72 bg-slate-800 overflow-hidden">
 
-                <img
-                  src={project.data.image}
-                  alt={project.data.title}
-                  class="w-full h-full object-cover"
-                />
+                  {
+                    image ? (
 
-              ) : (
+                      <img
+                        src={image}
+                        alt={project.data.title}
+                        class="w-full h-full object-cover
+                               transition-transform duration-700
+                               group-hover:scale-105"
+                      />
 
-                <div class="h-full flex items-center justify-center">
+                    ) : (
 
-                  <span class="text-gray-500 text-xl">
-                    Project Image
-                  </span>
+                      <div class="w-full h-full flex items-center justify-center">
+
+                        <span class="text-gray-500 text-lg">
+                          Project Image
+                        </span>
+
+                      </div>
+
+                    )
+                  }
+
+
+                  <!-- Image Overlay -->
+                  <div
+                    class="absolute inset-0
+                           bg-gradient-to-t
+                           from-slate-950/80
+                           via-transparent
+                           to-transparent"
+                  >
+                  </div>
+
+
+                  <!-- Project Number -->
+                  <div
+                    class="absolute left-6 bottom-5
+                           text-yellow-400
+                           text-4xl font-bold"
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
 
                 </div>
 
-              )
-            }
 
-          </div>
+                <!-- Project Content -->
+                <div class="p-7 md:p-8">
 
-
-          <!-- Project Content -->
-
-          <div class="p-8">
-
-            <!-- Project Number -->
-
-            <div class="text-yellow-400 text-4xl font-bold mb-4">
-
-              {String(index + 1).padStart(2, "0")}
-
-            </div>
+                  <!-- Category -->
+                  <p
+                    class="text-xs uppercase
+                           tracking-[0.25em]
+                           text-yellow-400"
+                  >
+                    {project.data.category}
+                  </p>
 
 
-            <!-- Title -->
-
-            <h2 class="text-3xl font-bold text-white">
-
-              {project.data.title}
-
-            </h2>
-
-
-            <!-- Location -->
-
-            <p class="mt-3 text-blue-400">
-
-              {project.data.location}
-
-            </p>
+                  <!-- Title -->
+                  <h2
+                    class="mt-3
+                           text-2xl md:text-3xl
+                           font-bold text-white
+                           group-hover:text-blue-300
+                           transition-colors"
+                  >
+                    {project.data.title}
+                  </h2>
 
 
-            <!-- Description -->
-
-            <p class="mt-6 text-gray-300 leading-relaxed">
-
-              {project.data.description}
-
-            </p>
+                  <!-- Location -->
+                  <p class="mt-3 text-blue-400">
+                    {project.data.location}
+                  </p>
 
 
-            <!-- Project Information -->
-
-            <div class="mt-6 space-y-2 text-gray-400">
-
-
-              <p>
-
-                <span class="text-yellow-400">
-                  Category:
-                </span>
-
-                {project.data.category}
-
-              </p>
+                  <!-- Description -->
+                  <p class="mt-5 text-gray-300 leading-relaxed">
+                    {project.data.description}
+                  </p>
 
 
-              <p>
+                  <!-- Project Information -->
+                  <div class="mt-6 space-y-2 text-sm text-gray-400">
 
-                <span class="text-yellow-400">
-                  System:
-                </span>
+                    <p>
+                      <span class="text-yellow-400">
+                        System:
+                      </span>
+                      {project.data.system}
+                    </p>
 
-                {project.data.system}
+                    <p>
+                      <span class="text-yellow-400">
+                        Year:
+                      </span>
+                      {project.data.year}
+                    </p>
 
-              </p>
+                    <p>
+                      <span class="text-yellow-400">
+                        Floors:
+                      </span>
+                      {project.data.floors}
+                    </p>
 
+                    <p>
+                      <span class="text-yellow-400">
+                        Area:
+                      </span>
+                      {project.data.area}
+                    </p>
 
-              <p>
-
-                <span class="text-yellow-400">
-                  Location:
-                </span>
-
-                {project.data.location}
-
-              </p>
-
-
-              <p>
-
-                <span class="text-yellow-400">
-                  Year:
-                </span>
-
-                {project.data.year}
-
-              </p>
-
-
-              <p>
-
-                <span class="text-yellow-400">
-                  Floors:
-                </span>
-
-                {project.data.floors}
-
-              </p>
+                  </div>
 
 
-              <p>
+                  <!-- View Project -->
+                  <div
+                    class="mt-8
+                           flex items-center
+                           justify-between
+                           border-t border-slate-800
+                           pt-5"
+                  >
 
-                <span class="text-yellow-400">
-                  Area:
-                </span>
+                    <span
+                      class="text-sm
+                             uppercase
+                             tracking-[0.2em]
+                             text-gray-400
+                             group-hover:text-white
+                             transition-colors"
+                    >
+                      View Project
+                    </span>
 
-                {project.data.area}
+                    <span
+                      class="text-xl
+                             text-yellow-400
+                             transform
+                             transition-transform
+                             group-hover:translate-x-2"
+                    >
+                      →
+                    </span>
 
-              </p>
+                  </div>
 
-            </div>
+                </div>
 
-          </div>
+              </article>
 
-        </div>
+            </a>
 
-      ))
-    }
+          );
 
-  </div>
+        })
+      }
+
+    </div>
+
+  </main>
 
 </BaseLayout>
