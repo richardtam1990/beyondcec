@@ -4,516 +4,619 @@ import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
 ---
 
-
-<section
-class="
-relative
-overflow-hidden
-bg-[#061426]
-py-28
-text-white
-"
->
-
-
-<!-- BACKGROUND -->
-
-<div
-class="
-absolute
-inset-0
-opacity-10
-bg-[linear-gradient(rgba(59,130,246,0.15)_1px,transparent_1px),
-linear-gradient(90deg,rgba(59,130,246,0.15)_1px,transparent_1px)]
-bg-[size:80px_80px]
-"
->
-</div>
-
-
-
-<div
-class="
-relative
-z-10
-mx-auto
-max-w-7xl
-px-8
-"
->
-
-
-<!-- TITLE -->
-
-<div
-class="
-mb-16
-flex
-flex-col
-justify-between
-gap-6
-md:flex-row
-md:items-end
-"
->
-
-
-<div>
-
-
-<p
-class="
-text-sm
-tracking-[0.5em]
-text-blue-300
-"
->
-
-FEATURED PROJECTS
-
-</p>
-
-
-
-<h2
-class="
-mt-5
-text-3xl
-font-bold
-leading-tight
-sm:text-4xl
-md:text-6xl
-"
->
-
-Our
-
-<span
-class="text-[#d4af37]"
->
-Projects
-</span>
-
-</h2>
-
-
-</div>
-
-
-
-<p
-class="
-max-w-md
-text-gray-300
-"
->
-
-Delivering engineering solutions
-for landmark projects across ASEAN.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<!-- PROJECT LIST -->
-
-<div
-class="
-space-y-10
-"
->
-
-
-{
-
-projects.map((project) => (
-
-
-<div
-class="
-group
-overflow-hidden
-rounded-2xl
-border
-border-blue-400/20
-bg-white/5
-backdrop-blur
-"
->
-
-
-<!-- IMAGE AREA -->
-
-
-<div
-class="
-relative
-h-[420px]
-overflow-hidden
-bg-gradient-to-br
-from-blue-900
-to-[#020617]
-"
->
-
-
-{
-
-project.data.image ? (
-
-<img
-src={project.data.image}
-alt={project.data.title}
-class="
-h-full
-w-full
-object-cover
-transition
-duration-700
-group-hover:scale-105
-"
-/>
-
-
-) : (
-
-
-<div
-class="
-absolute
-inset-0
-flex
-items-center
-justify-center
-text-blue-300/40
-tracking-widest
-"
->
-
-PROJECT IMAGE
-
-</div>
-
-
-)
-
-}
-
-
-
-
-<!-- SCAN EFFECT -->
-
-
-<div
-class="
-absolute
-inset-0
-bg-gradient-to-r
-from-transparent
-via-blue-400/10
-to-transparent
-translate-x-[-100%]
-transition
-duration-1000
-group-hover:translate-x-[100%]
-"
->
-</div>
-
-
-</div>
-
-
-
-
-
-<!-- CONTENT -->
-
-
-<div
-class="
-grid
-gap-10
-p-10
-md:grid-cols-2
-"
->
-
-
-
-<!-- DESCRIPTION -->
-
-
-<div>
-
-
-<p
-class="
-text-sm
-tracking-[0.4em]
-text-blue-300
-"
->
-
-{project.data.location}
-
-</p>
-
-
-
-
-<h3
-class="
-mt-4
-text-3xl
-font-bold
-"
->
-
-{project.data.title}
-
-</h3>
-
-
-
-
-
-<p
-class="
-mt-5
-leading-relaxed
-text-gray-300
-"
->
-
-{project.data.description}
-
-</p>
-
-
-
-</div>
-
-
-
-
-
-
-
-<!-- PROJECT DATA -->
-
-
-<div
-class="
-grid
-grid-cols-2
-gap-5
-"
->
-
-
-
-
-<div
-class="
-rounded-lg
-border
-border-blue-400/20
-p-5
-"
->
-
-<p
-class="
-text-3xl
-font-bold
-text-[#d4af37]
-"
->
-
-{project.data.floors}
-
-</p>
-
-
-<p
-class="
-mt-2
-text-xs
-tracking-widest
-text-gray-400
-"
->
-
-FLOORS
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div
-class="
-rounded-lg
-border
-border-blue-400/20
-p-5
-"
->
-
-<p
-class="
-text-3xl
-font-bold
-text-[#d4af37]
-"
->
-
-{project.data.area}
-
-</p>
-
-
-<p
-class="
-mt-2
-text-xs
-tracking-widest
-text-gray-400
-"
->
-
-AREA
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div
-class="
-rounded-lg
-border
-border-blue-400/20
-p-5
-"
->
-
-<p
-class="
-text-3xl
-font-bold
-text-[#d4af37]
-"
->
-
-{project.data.system}
-
-</p>
-
-
-<p
-class="
-mt-2
-text-xs
-tracking-widest
-text-gray-400
-"
->
-
-SYSTEM
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div
-class="
-rounded-lg
-border
-border-blue-400/20
-p-5
-"
->
-
-<p
-class="
-text-3xl
-font-bold
-text-[#d4af37]
-"
->
-
-{project.data.year}
-
-</p>
-
-
-<p
-class="
-mt-2
-text-xs
-tracking-widest
-text-gray-400
-"
->
-
-PROJECT
-
-</p>
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-))
-
-
-}
-
-
-</div>
-
-
-
-</div>
-
+<section class="w-full px-5 sm:px-6 lg:px-8">
+
+  <div class="max-w-7xl mx-auto">
+
+    {
+      projects.slice(0, 4).map((project) => {
+
+        const images = project.data.images ?? [];
+
+        return (
+
+          <a
+            href={`/projects/${project.id}/`}
+            class="group block mb-8"
+            data-project-link
+          >
+
+            <article
+              class="overflow-hidden rounded-2xl
+                     border border-slate-800
+                     bg-slate-900
+                     hover:border-yellow-400
+                     transition-all duration-500"
+            >
+
+              <!-- ========================= -->
+              <!-- Project Image Carousel -->
+              <!-- ========================= -->
+
+              <div
+                class="project-carousel
+                       relative
+                       w-full
+                       h-64
+                       overflow-hidden
+                       bg-slate-800"
+                data-carousel
+              >
+
+                {
+                  images.length > 0 ? (
+
+                    <div class="relative w-full h-full">
+
+                      {
+                        images.map((image, index) => (
+
+                          <img
+                            src={image}
+                            alt={`${project.data.title} - Image ${index + 1}`}
+                            class={`carousel-image
+                                    absolute
+                                    inset-0
+                                    w-full
+                                    h-full
+                                    object-cover
+                                    transition-opacity
+                                    duration-700
+                                    ease-in-out
+                                    ${
+                                      index === 0
+                                        ? "opacity-100"
+                                        : "opacity-0"
+                                    }`}
+                            data-index={index}
+                            loading={index === 0 ? "eager" : "lazy"}
+                          />
+
+                        ))
+                      }
+
+                    </div>
+
+                  ) : (
+
+                    <div
+                      class="w-full h-full
+                             flex items-center justify-center"
+                    >
+
+                      <span class="text-gray-500">
+                        PROJECT IMAGE
+                      </span>
+
+                    </div>
+
+                  )
+                }
+
+
+                <!-- ========================= -->
+                <!-- Dark Overlay -->
+                <!-- ========================= -->
+
+                <div
+                  class="absolute
+                         inset-0
+                         bg-gradient-to-t
+                         from-slate-950/70
+                         via-transparent
+                         to-transparent
+                         pointer-events-none
+                         z-10"
+                >
+                </div>
+
+
+                <!-- ========================= -->
+                <!-- Previous Button -->
+                <!-- ========================= -->
+
+                {
+                  images.length > 1 && (
+
+                    <button
+                      type="button"
+                      data-prev
+                      aria-label="Previous image"
+                      class="absolute
+                             left-4
+                             top-1/2
+                             -translate-y-1/2
+                             w-10
+                             h-10
+                             rounded-full
+                             bg-black/40
+                             backdrop-blur-sm
+                             border
+                             border-white/20
+                             text-white
+                             flex
+                             items-center
+                             justify-center
+                             opacity-0
+                             group-hover:opacity-100
+                             hover:bg-yellow-400
+                             hover:text-slate-950
+                             transition-all
+                             duration-300
+                             z-30"
+                    >
+                      ←
+                    </button>
+
+                  )
+                }
+
+
+                <!-- ========================= -->
+                <!-- Next Button -->
+                <!-- ========================= -->
+
+                {
+                  images.length > 1 && (
+
+                    <button
+                      type="button"
+                      data-next
+                      aria-label="Next image"
+                      class="absolute
+                             right-4
+                             top-1/2
+                             -translate-y-1/2
+                             w-10
+                             h-10
+                             rounded-full
+                             bg-black/40
+                             backdrop-blur-sm
+                             border
+                             border-white/20
+                             text-white
+                             flex
+                             items-center
+                             justify-center
+                             opacity-0
+                             group-hover:opacity-100
+                             hover:bg-yellow-400
+                             hover:text-slate-950
+                             transition-all
+                             duration-300
+                             z-30"
+                    >
+                      →
+                    </button>
+
+                  )
+                }
+
+
+                <!-- ========================= -->
+                <!-- Image Indicators -->
+                <!-- ========================= -->
+
+                {
+                  images.length > 1 && (
+
+                    <div
+                      class="absolute
+                             bottom-4
+                             left-1/2
+                             -translate-x-1/2
+                             flex
+                             items-center
+                             gap-2
+                             z-30"
+                      data-dots
+                    >
+
+                      {
+                        images.map((_, index) => (
+
+                          <button
+                            type="button"
+                            class={`carousel-dot
+                                    h-2
+                                    rounded-full
+                                    transition-all
+                                    duration-300
+                                    ${
+                                      index === 0
+                                        ? "bg-yellow-400 w-6"
+                                        : "bg-white/50 w-2"
+                                    }`}
+                            data-dot={index}
+                            aria-label={`Go to image ${index + 1}`}
+                          >
+                          </button>
+
+                        ))
+                      }
+
+                    </div>
+
+                  )
+                }
+
+              </div>
+
+
+              <!-- ========================= -->
+              <!-- Project Content -->
+              <!-- ========================= -->
+
+              <div class="p-7">
+
+                <!-- Location -->
+
+                <p class="text-sm text-blue-400">
+                  {project.data.location}
+                </p>
+
+
+                <!-- Title -->
+
+                <h3
+                  class="mt-2
+                         text-2xl
+                         font-bold
+                         text-white
+                         group-hover:text-blue-300
+                         transition-colors"
+                >
+                  {project.data.title}
+                </h3>
+
+
+                <!-- Description -->
+
+                <p class="mt-4 text-gray-400 leading-relaxed">
+                  {project.data.description}
+                </p>
+
+
+                <!-- ========================= -->
+                <!-- Project Data -->
+                <!-- ========================= -->
+
+                <div
+                  class="mt-6
+                         grid
+                         grid-cols-2
+                         gap-4
+                         text-sm"
+                >
+
+                  <div>
+
+                    <span class="block text-gray-500">
+                      FLOORS
+                    </span>
+
+                    <span class="block mt-1 text-gray-200">
+                      {project.data.floors}
+                    </span>
+
+                  </div>
+
+
+                  <div>
+
+                    <span class="block text-gray-500">
+                      AREA
+                    </span>
+
+                    <span class="block mt-1 text-gray-200">
+                      {project.data.area}
+                    </span>
+
+                  </div>
+
+
+                  <div>
+
+                    <span class="block text-gray-500">
+                      SYSTEM
+                    </span>
+
+                    <span class="block mt-1 text-gray-200">
+                      {project.data.system}
+                    </span>
+
+                  </div>
+
+
+                  <div>
+
+                    <span class="block text-gray-500">
+                      PROJECT
+                    </span>
+
+                    <span class="block mt-1 text-gray-200">
+                      {project.data.year}
+                    </span>
+
+                  </div>
+
+                </div>
+
+
+                <!-- ========================= -->
+                <!-- View Project -->
+                <!-- ========================= -->
+
+                <div
+                  class="mt-7
+                         pt-5
+                         border-t
+                         border-slate-800
+                         flex
+                         items-center
+                         justify-between"
+                >
+
+                  <span
+                    class="text-xs
+                           uppercase
+                           tracking-[0.2em]
+                           text-gray-400
+                           group-hover:text-white
+                           transition-colors"
+                  >
+                    View Project
+                  </span>
+
+
+                  <span
+                    class="text-xl
+                           text-yellow-400
+                           transition-transform
+                           group-hover:translate-x-2"
+                  >
+                    →
+                  </span>
+
+                </div>
+
+              </div>
+
+            </article>
+
+          </a>
+
+        );
+
+      })
+    }
+
+
+    <!-- ========================= -->
+    <!-- View All Projects -->
+    <!-- ========================= -->
+
+    {
+      projects.length > 0 && (
+
+        <div class="mt-12 text-center">
+
+          <a
+            href="/projects/"
+            class="inline-flex items-center gap-3
+                   px-7 py-3
+                   border
+                   border-yellow-400/50
+                   rounded-full
+                   text-sm
+                   uppercase
+                   tracking-[0.2em]
+                   text-yellow-400
+                   hover:bg-yellow-400
+                   hover:text-slate-950
+                   transition-all
+                   duration-300"
+          >
+
+            View All Projects
+
+            <span>→</span>
+
+          </a>
+
+        </div>
+
+      )
+    }
+
+  </div>
 
 </section>
+
+
+<!-- ========================= -->
+<!-- PROJECT CAROUSEL SCRIPT -->
+<!-- ========================= -->
+
+<script>
+
+  const initProjectCarousels = () => {
+
+    const carousels =
+      document.querySelectorAll("[data-carousel]");
+
+
+    carousels.forEach((carousel) => {
+
+      const images =
+        Array.from(
+          carousel.querySelectorAll(".carousel-image")
+        );
+
+
+      const dots =
+        Array.from(
+          carousel.querySelectorAll("[data-dot]")
+        );
+
+
+      const nextButton =
+        carousel.querySelector("[data-next]");
+
+
+      const prevButton =
+        carousel.querySelector("[data-prev]");
+
+
+      if (images.length <= 1) {
+        return;
+      }
+
+
+      let currentIndex = 0;
+
+
+      const showImage = (index) => {
+
+        currentIndex =
+          (index + images.length) %
+          images.length;
+
+
+        images.forEach((image, imageIndex) => {
+
+          image.classList.toggle(
+            "opacity-100",
+            imageIndex === currentIndex
+          );
+
+
+          image.classList.toggle(
+            "opacity-0",
+            imageIndex !== currentIndex
+          );
+
+        });
+
+
+        dots.forEach((dot, dotIndex) => {
+
+          dot.classList.toggle(
+            "bg-yellow-400",
+            dotIndex === currentIndex
+          );
+
+
+          dot.classList.toggle(
+            "bg-white/50",
+            dotIndex !== currentIndex
+          );
+
+
+          dot.classList.toggle(
+            "w-6",
+            dotIndex === currentIndex
+          );
+
+
+          dot.classList.toggle(
+            "w-2",
+            dotIndex !== currentIndex
+          );
+
+        });
+
+      };
+
+
+      const nextImage = () => {
+
+        showImage(currentIndex + 1);
+
+      };
+
+
+      const previousImage = () => {
+
+        showImage(currentIndex - 1);
+
+      };
+
+
+      nextButton?.addEventListener(
+        "click",
+        (event) => {
+
+          event.preventDefault();
+          event.stopPropagation();
+
+          nextImage();
+
+        }
+      );
+
+
+      prevButton?.addEventListener(
+        "click",
+        (event) => {
+
+          event.preventDefault();
+          event.stopPropagation();
+
+          previousImage();
+
+        }
+      );
+
+
+      dots.forEach((dot, index) => {
+
+        dot.addEventListener(
+          "click",
+          (event) => {
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            showImage(index);
+
+          }
+        );
+
+      });
+
+
+      /*
+       * Automatic slideshow
+       *
+       * 5 seconds per image
+       */
+
+      setInterval(() => {
+
+        nextImage();
+
+      }, 5000);
+
+
+      showImage(0);
+
+    });
+
+  };
+
+
+  if (document.readyState === "loading") {
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      initProjectCarousels
+    );
+
+  } else {
+
+    initProjectCarousels();
+
+  }
+
+</script>
