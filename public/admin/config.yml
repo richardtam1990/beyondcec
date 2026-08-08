@@ -1,22 +1,24 @@
 backend:
   name: github
-  repo: 你的GitHub用户名/你的仓库名
+  repo: richardtam1990/beyondcec
   branch: main
+  base_url: https://beyondcec-auth.tanruizhou1990.workers.dev
+  auth_endpoint: auth
 
+media_folder: "public/uploads"
+public_folder: "/uploads"
 
-media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
-
+site_url: "/"
 
 collections:
 
-  - name: "pages"
-    label: "Pages"
+  - name: "homepage"
+    label: "Homepage"
     files:
 
-      - label: "Homepage"
+      - label: "Homepage Content"
         name: "homepage"
-        file: "src/content/homepage.md"
+        file: "src/content/homepage/index.md"
 
         fields:
 
@@ -24,17 +26,75 @@ collections:
             name: "hero_title"
             widget: "string"
 
-
           - label: "Hero Description"
             name: "hero_description"
-            widget: "text"
-
+            widget: "string"
 
           - label: "About Title"
             name: "about_title"
             widget: "string"
 
+          - label: "About Heading Top"
+            name: "about_heading_top"
+            widget: "string"
+
+          - label: "About Heading Highlight"
+            name: "about_heading_highlight"
+            widget: "string"
+
+          - label: "About Heading Bottom"
+            name: "about_heading_bottom"
+            widget: "string"
 
           - label: "About Description"
             name: "about_description"
             widget: "text"
+
+          - label: "About Description 2"
+            name: "about_description_2"
+            widget: "text"
+
+
+  - name: "projects"
+    label: "Projects"
+    folder: "src/content/projects"
+    create: true
+    extension: "md"
+
+    fields:
+
+      - label: "Project Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Location"
+        name: "location"
+        widget: "string"
+
+      - label: "Category"
+        name: "category"
+        widget: "string"
+
+      - label: "Year"
+        name: "year"
+        widget: "string"
+
+      - label: "Project Image"
+        name: "image"
+        widget: "image"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+
+      - label: "Floors"
+        name: "floors"
+        widget: "string"
+
+      - label: "Area"
+        name: "area"
+        widget: "string"
+
+      - label: "System"
+        name: "system"
+        widget: "string"
