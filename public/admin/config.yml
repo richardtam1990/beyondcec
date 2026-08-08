@@ -80,9 +80,13 @@ collections:
         name: "year"
         widget: "string"
 
-      - label: "Project Image"
-        name: "image"
-        widget: "image"
+- label: "Project Gallery"
+  name: "images"
+  widget: "list"
+  field:
+    label: "Project Image"
+    name: "image"
+    widget: "image"
 
       - label: "Description"
         name: "description"
