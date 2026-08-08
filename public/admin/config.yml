@@ -2,6 +2,7 @@ backend:
   name: github
   repo: richardtam1990/beyondcec
   branch: main
+  site_domain: beyondcec.com
   base_url: https://beyondcec-auth.tanruizhou1990.workers.dev
   auth_endpoint: auth
 
