@@ -1,5 +1,5 @@
 ---
-title: BEYOND Headquarters Building
+title: BEYOND CBD
 location: Vientiane, Laos
 category: BEYOND
 year: "2025"
