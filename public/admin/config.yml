@@ -3,9 +3,9 @@ backend:
   repo: richardtam1990/beyondcec
   branch: main
 
-site_domain: beyondcec.com
-base_url: "https://beyondcec-auth.tanruizhou1990.workers.dev"
-auth_endpoint: auth
+  site_domain: beyondcec.com
+  base_url: "https://beyondcec-auth.tanruizhou1990.workers.dev"
+  auth_endpoint: auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -93,6 +93,7 @@ collections:
         name: "year"
         widget: "string"
 
+
       # ----------------------------------------
       # Project Gallery
       # ----------------------------------------
@@ -102,10 +103,10 @@ collections:
         widget: "list"
 
         field:
-
           label: "Project Image"
           name: "image"
           widget: "image"
+
 
       # ----------------------------------------
       # Project Description
