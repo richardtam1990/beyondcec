@@ -2,9 +2,10 @@ backend:
   name: github
   repo: richardtam1990/beyondcec
   branch: main
-  site_domain: beyondcec.com
-  base_url: https://beyondcec-auth.tanruizhou1990.workers.dev
-  auth_endpoint: auth
+
+site_domain: beyondcec.com
+base_url: "https://beyondcec-auth.tanruizhou1990.workers.dev"
+auth_endpoint: auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -13,8 +14,13 @@ site_url: "/"
 
 collections:
 
+  # ==========================================
+  # HOMEPAGE
+  # ==========================================
+
   - name: "homepage"
     label: "Homepage"
+
     files:
 
       - label: "Homepage Content"
@@ -56,10 +62,17 @@ collections:
             widget: "text"
 
 
+  # ==========================================
+  # PROJECTS
+  # ==========================================
+
   - name: "projects"
     label: "Projects"
+
     folder: "src/content/projects"
+
     create: true
+
     extension: "md"
 
     fields:
@@ -80,13 +93,23 @@ collections:
         name: "year"
         widget: "string"
 
-- label: "Project Gallery"
-  name: "images"
-  widget: "list"
-  field:
-    label: "Project Image"
-    name: "image"
-    widget: "image"
+      # ----------------------------------------
+      # Project Gallery
+      # ----------------------------------------
+
+      - label: "Project Gallery"
+        name: "images"
+        widget: "list"
+
+        field:
+
+          label: "Project Image"
+          name: "image"
+          widget: "image"
+
+      # ----------------------------------------
+      # Project Description
+      # ----------------------------------------
 
       - label: "Description"
         name: "description"
